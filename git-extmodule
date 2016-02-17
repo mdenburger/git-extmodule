@@ -121,7 +121,7 @@ update_module() {
 	if [ -e "$path/.git" ]; then
 		(
 			if has_uncommitted "$path"; then
-				echo "$path - uncommitted changes detected, can not update repository" >&2
+				echo "$path - uncommitted changes detected, cannot update repository" >&2
 				exit 1
 			else
 				echo "$path - updating branch '$branch'" >&2
